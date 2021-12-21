@@ -113,16 +113,6 @@
 
 
             });
-			$(function () {
-				$("#registerForm").submit(function () {
-					$.get("${pageContext.request.contextPath}/user/register",$(this).serialize(),function (data) {
-						if (data){
-							alert("注册成功，请登录！")
-							location.href="http://localhost/Car/login.jsp"
-						}
-					})
-				})
-			})
 
 
 		</script>
@@ -142,7 +132,7 @@
     			<div class="rg_form_center">
 					<div id="errorMsg" style="color:red;text-align: center"></div>
 					<!--注册表单-->
-    				<form id="registerForm" action="#">
+    				<form id="registerForm" action="user">
 						<!--提交处理请求的标识符-->
 						<input type="hidden" name="action" value="register">
     					<table style="margin-top: 25px;">
@@ -170,7 +160,14 @@
     								<input type="text" id="email" name="email" placeholder="请输入Email">
     							</td>
     						</tr>
-
+    						<tr>
+    							<td class="td_left">
+    								<label for="name">姓名</label>
+    							</td>
+    							<td class="td_right">
+    								<input type="text" id="name" name="name" placeholder="请输入真实姓名">
+    							</td>
+    						</tr>
     						<tr>
     							<td class="td_left">
     								<label for="telephone">手机号</label>

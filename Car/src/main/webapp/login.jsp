@@ -49,7 +49,7 @@
 
 <body>
 <!--引入头部-->
-<div id="header"></div>
+<%--<div id="header"></div>--%>
 <!-- 头部 end -->
 <section id="login_wrap">
     <div class="rg_layout">
@@ -91,7 +91,7 @@
     </div>
 </section>
 <!--引入尾部-->
-<div id="footer"></div>
+<%--<div id="footer"></div>--%>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
