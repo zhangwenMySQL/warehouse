@@ -91,7 +91,7 @@
     </div>
 </section>
 <!--引入尾部-->
-<%--<div id="footer"></div>--%>
+<div id="footer"></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
