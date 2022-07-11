@@ -7,9 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 	<script src="../js/jquery-1.8.3.min.js"/>
-<script type="text/javascript">
-	
-</script>
+
 </head>
 <body>
  		<div class="page-bar">

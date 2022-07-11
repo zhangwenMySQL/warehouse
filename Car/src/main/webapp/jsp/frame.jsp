@@ -1,11 +1,17 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@include file="/jsp/common/head.jsp"%>
-    <div class="right">
-        <img class="wColck" src="${pageContext.request.contextPath }/images/clock.jpg" alt=""/>
+
+    <div class="frameRight">
+
         <div class="wFont">
-            <h2>${user.username}</h2>
-            <p>欢迎来到超市订单管理系统!</p>
+            <font color="#dc143c">
+                <p><h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>${user.userPhone},欢迎来到二手车交易系统!</b></h2></p>
+            </font>
+
         </div>
+
     </div>
 </section>
 <%@include file="/jsp/common/foot.jsp" %>

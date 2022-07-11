@@ -227,7 +227,6 @@ input[type='reset']:active, input[type='reset']:focus, .providerView a:hover, .p
     top: 60px;
 }
 
-/*供应商管理页面-->供应商添加页面*/
 .providerAdd {
     border: 1px solid #9ac70f;
     padding: 20px;

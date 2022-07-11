@@ -23,10 +23,12 @@ li{
     height: 48px;
     line-height: 48px;
     font-size: 14px;
-    background: linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);
-    background:-webkit-linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);
-    background:-moz-linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);
-    background:-ms-linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);
+    background: #83d1f5;
+    /*background: linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);*/
+    /*background:-webkit-linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);*/
+    /*background:-moz-linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);*/
+    /*background:-ms-linear-gradient(to bottom,#60acf0,#64a5df,#62a0dd,#5994d6,#4f8ace,#4880ca);*/
+    opacity: 0.9;
 }
 .publicHeader h1{
     float: left;
@@ -72,6 +74,8 @@ li{
     line-height: 28px;
     font-size: 12px;
     background: linear-gradient(to bottom,#f5f9f8,#eef2fb,#e2ecf5,#e2ecf5,#e0edf6);
+    /*background: #83d1f5;*/
+    /*opacity: 0.6;*/
     padding-left: 20px;
     color: #808589;
 }
@@ -95,11 +99,13 @@ li{
 }
 /*左边*/
 .left{
-    width: 168px;
-    background: url("../images/leftBg.png") 0 0 repeat-y;
-    margin-right: 10px;
+    width: 180px;
+    /*background: url("../images/leftBg.png") 0 0 repeat-y;*/
+    /*margin-right: 10px;*/
     /*height: 520px;*/
     min-height: 520px;
+    background: #83d1f5;
+    opacity: 0.6;
 
 }
 .leftH2{
@@ -130,6 +136,7 @@ li{
 .list{
     margin: 0 20px;
     font-weight: bold;
+
 }
 .list li{
     height: 40px;
@@ -143,13 +150,13 @@ li{
     background: url("../images/gys.png") 0  center no-repeat;
 }
 .list li:nth-child(3){
-    background: url("../images/yh.png") 0  center no-repeat;
+    background: url("../images/buy.png") 0  center no-repeat;
 }
 .list li:nth-child(4){
-    background: url("../images/mm.png") 0  center no-repeat;
+    background: url("../images/yh.png") 0  center no-repeat;
 }
 .list li:nth-child(5){
-    background: url("../images/tc.png") 0  center no-repeat;
+    background: url("../images/mm.png") 0  center no-repeat;
 }
 .list li:hover{
     background-color: #acd5f5;
@@ -170,6 +177,14 @@ li{
 /*右边*/
 .right{
     width: 85%;
+    height: 600px;
+    margin-left: 20px;
+}
+.frameRight{
+    width: 100%;
+    height: 600px;
+    background: url(../images/test3.jpeg);
+    opacity: 0.95;
 }
 /*右边所在位置栏*/
 .location{

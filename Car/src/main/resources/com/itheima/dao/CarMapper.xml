@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.CarMapper">
+    <select id="selectByList" resultType="com.itheima.domain.dto.CarIssueDto"
+            parameterType="com.itheima.domain.dto.CarIssueDto">
+        SELECT
+        car_issue.car_id as carId,
+        car.user_id AS userId,
+        car.car_brand AS carBrand,
+        car.car_series AS carSeries,
+        car.car_age_limit AS carAgeLimit,
+        car.car_price AS carPrice,
+        car.car_check AS issueCheck,
+        car_issue.car_check AS carCheck
+        FROM
+        car_issue
+        LEFT JOIN car ON car.user_id = car_issue.user_id and car.car_id=car_issue.car_id
+        <where>
+            <if test="carBrand!=null">
+                car.car_brand like CONCAT(CONCAT('%',#{carBrand},'%'))
+            </if>
+            <if test="userId!=null">
+                and car.user_id=#{userId}
+            </if>
+            <if test="carCheck!=null">
+                and car.car_check=#{carCheck}
+            </if>
+            <if test="userId!=null">
+                and car_issue.user_id=#{userId}
+            </if>
+            <if test="carCheck!=null">
+                and car_issue.issue_check=#{carCheck}
+            </if>
+        </where>
+        order by car.car_check desc,car.insert_time asc
+    </select>
+
+</mapper>

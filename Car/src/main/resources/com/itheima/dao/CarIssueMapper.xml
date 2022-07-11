@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.CarIssueMapper">
+    <update id="updateByCarCheck" parameterType="java.lang.Long">
+        update car_issue set car_check=0 where car_id=#{carId}
+    </update>
+    <update id="updateByIssueCheck" parameterType="com.itheima.domain.Entity.CarIssue">
+        update car_issue set issue_check=#{issueCheck} where car_id=#{carId}
+    </update>
+    <delete id="deleteIssue" parameterType="com.itheima.domain.Entity.CarIssue">
+        delete from car_issue where car_id=#{carId}
+    </delete>
+</mapper>

@@ -73,8 +73,16 @@ $(function(){
 			&& rnewpassword.attr("validateStatus") == "true"){
 			if(confirm("确定要修改密码？")){
 				$("#userForm").submit(function () {
-					$.post("/x4/user/upDataPassword",$(this).serialize(),function (data) {
+					$.post("/Car/user/updatePassword",$(this).serialize(),function (data) {
 						console.log(data);
+						if (data){
+							alert("修改密码成功，请重新登录！")
+							location.href="http://localhost/Car/login.jsp";
+						}else {
+							alert("修改密码失败");
+							location.href="http://localhost/Car/jsp/pwdmodify.jsp"
+						}
+						return false;
 					})
 					return false;
 				})
@@ -82,13 +90,5 @@ $(function(){
 		}
 		
 	});
-	$("#userForm").submit(function () {
-		$.post("/x4/user/upDataPassword",$(this).serialize(),function (data) {
-			if (data) {
-				location.href = "http://localhost/x4/login.jsp";
-				alert("修改密码成功，请重新登录！")
-			}
-		})
-		return false;
-	})
+
 });

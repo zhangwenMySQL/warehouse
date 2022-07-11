@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
+<!--    <properties resource="jdbc.properties"></properties>-->
+<!--&lt;!&ndash;    自定义别名&ndash;&gt;-->
     <typeAliases>
+<!--        <typeAlias type="com.itheima.domain.entity.SmbmsUser" alias="user"></typeAlias>-->
+<!--        <typeAlias type="com.itheima.domain.SmbmsRole" alias="role"></typeAlias>-->
+<!--        <typeAlias type="com.itheima.domain.SmbmsBill" alias="bill"></typeAlias>-->
+<!--        <typeAlias type="com.itheima.domain.SmbmsProvider" alias="pro"></typeAlias>-->
         <package name="com.itheima.domain"/>
     </typeAliases>
+<!--    &lt;!&ndash;    数据源环境&ndash;&gt;-->
     <!--    配置分页助手-->
     <plugins>
         <plugin interceptor="com.github.pagehelper.PageHelper">
@@ -26,7 +32,7 @@
     <!--    加载映射文件-->
 <!--    <mappers>-->
 <!--&lt;!&ndash;        <package name="com.itheima.dao"/>&ndash;&gt;-->
-<!--        <mapper resource="UserDao.xml"></mapper>-->
+<!--        <mapper resource="UserMapper.xml"></mapper>-->
 <!--        <mapper resource="BillDao.xml"></mapper>-->
 <!--        <mapper resource="Provider.xml"></mapper>-->
 <!--    </mappers>-->

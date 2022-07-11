@@ -10,10 +10,10 @@
                 <form id="userForm" name="userForm" method="post" action="#">
                     <input type="hidden" name="method" value="savepwd">
                     <!--div的class 为error是验证错误，ok是验证成功-->
-                    <div class="info">${message}</div>
+<%--                    <div class="info">${message}</div>--%>
                     <div class="">
-                        <label for="oldPassword">旧密码：</label>
-                        <input type="password" name="oldpassword" id="oldpassword" value="${user.userpassword}">
+                        <label for="userPassword">旧密码：</label>
+                        <input type="password" name="userPassword" id="userPassword" value="${user.userPassword}">
 						<font color="red"></font>
                     </div>
                     <div>

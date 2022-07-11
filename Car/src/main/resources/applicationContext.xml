@@ -3,13 +3,43 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xsi:schemaLocation="
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
-       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
-        ">
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+<!--    &lt;!&ndash;    1.加载jdbc.properties文件&ndash;&gt;-->
+<!--    <context:property-placeholder location="classpath:jdbc.properties"/>-->
+<!--    &lt;!&ndash;    2.配置数据源文件&ndash;&gt;-->
+<!--    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+<!--        <property name="driverClass" value="${jdbc.driver}"/>-->
+<!--        <property name="jdbcUrl" value="${jdbc.url}"/>-->
+<!--        <property name="user" value="${jdbc.username}"/>-->
+<!--        <property name="password" value="${jdbc.password}"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;    3.jdbcTemplate对象&ndash;&gt;-->
+<!--    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+<!--        <property name="dataSource" ref="dataSource"></property>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;    4.配置RoleService&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="roleService" class="com.itheima.service.Impl.RoleServiceImpl">&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="roleDao" ref="roleDao"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--    &lt;!&ndash;    4.配置UserService&ndash;&gt;-->
+<!--    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl">-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--&lt;!&ndash;        <property name="role" ref="roleDao"/>&ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    &lt;!&ndash;    5.配置RoleDao&ndash;&gt;-->
+<!--&lt;!&ndash;    <bean id="roleDao" class="com.itheima.dao.im.RoleDaoImpl">&ndash;&gt;-->
+<!--&lt;!&ndash;        <property name="template" ref="jdbcTemplate"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    </bean>&ndash;&gt;-->
+<!--    &lt;!&ndash;    5.配置UserDao&ndash;&gt;-->
+<!--    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl">-->
+<!--        <property name="template" ref="jdbcTemplate"/>-->
+<!--    </bean>-->
+<!--</beans>-->
     <!--组件扫描 扫描service和mapper-->
     <context:component-scan base-package="com.itheima">
         <!--排除controller的扫描-->
@@ -27,7 +57,6 @@
         <property name="password" value="${jdbc.password}"></property>
     </bean>
 
-    <!--配置sessionFactory-->
     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
         <!--加载mybatis核心文件-->
@@ -52,6 +81,5 @@
 
 
     <!--事务的aop织入-->
-
 
 </beans>
